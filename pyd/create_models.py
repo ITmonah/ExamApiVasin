@@ -6,6 +6,10 @@ class UserCreate(BaseModel):
     mail:EmailStr = Field(...,example="gena228@mail.ru")
     password:str=Field(...,max_length=255, min_length=4,example="1235")
 
+class UserLog(BaseModel):
+    name:str=Field(...,max_length=255, min_length=1,example="Gena")
+    password:str=Field(...,max_length=255, min_length=4,example="1235")
+
 class RecipeCreate(BaseModel):
     name:str=Field(...,max_length=255, min_length=1,example="Сосиска в тесте")
     info:str=Field(...,max_length=1000, min_length=1,example="Заверните сосиску в тесто и выпекайте 20 минут в духовке")
@@ -16,10 +20,6 @@ class IngredientCreate(BaseModel):
 
 class System_of_calculationCreate(BaseModel):
     name:str=Field(...,max_length=255, min_length=1,example="кг")
-
-class Credentials(BaseModel):
-    mail: EmailStr = Field(..., example='gena228@mail.ru')
-    pwd: str = Field(..., max_length=255, min_length=4, example='1235')
 
 class CountCreate(BaseModel):        
     id_ingredient:int=Field(..., gt=0, example=10)
