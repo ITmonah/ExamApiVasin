@@ -1,0 +1,8 @@
+fastapi[all]
+fastapi-pagination
+sqlalchemy
+sqlalchemy_utils
+PyJWT
+pyjwt[crypto]
+passlib
+bcrypt
