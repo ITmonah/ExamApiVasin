@@ -12,7 +12,6 @@ class UserBase(BaseModel):
 class RecipeBase(BaseModel):
     id:int=Field(...,gt=0,example=22) 
     name:str=Field(...,example="Мясной пирог")
-    face_img:str=Field(...,example="files/eda.png")
     info:str=Field(...,max_length=1000, min_length=1,example="Заверните сосиску в тесто и выпекайте 20 минут в духовке")
     created_at:datetime=Field(...,example='2024-01-01 00:00:00')
     cooking_time:int=Field(..., gt=0, example=30)

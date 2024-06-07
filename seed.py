@@ -44,12 +44,12 @@ with Session(bind=engine) as session:
     soc6=models.System_of_calculation(name="стол. л.")
     soc7=models.System_of_calculation(name="чайн. л.")
 
-    r1=models.Recipe(name="Пицца",info='Приготовить блюдо блин', face_img="recipe/files/pizza.jpg", cooking_time=120) #рецепты
-    r2=models.Recipe(name="Клубника в шоколаде",info='Приготовить блюдо блин', face_img="recipe/files/choko.jpg", cooking_time=30) 
-    r3=models.Recipe(name="Макароны с сыром",info='Приготовить блюдо блин', face_img="recipe/files/mak.jpg", cooking_time=20) 
-    r4=models.Recipe(name="Гречка с молоком",info='Приготовить блюдо блин', face_img="recipe/files/grechka.jpg", cooking_time=60) 
-    r5=models.Recipe(name="Чай с малиной",info='Приготовить блюдо блин', face_img="recipe/files/chay.jpg", cooking_time=15) 
-    r6=models.Recipe(name="Манник",info='Приготовить блюдо блин', face_img="recipe/files/mannik.jpg", cooking_time=100) 
+    r1=models.Recipe(name="Пицца",info='Приготовить блюдо блин', cooking_time=120) #рецепты
+    r2=models.Recipe(name="Клубника в шоколаде",info='Приготовить блюдо блин', cooking_time=30) 
+    r3=models.Recipe(name="Макароны с сыром",info='Приготовить блюдо блин', cooking_time=20) 
+    r4=models.Recipe(name="Гречка с молоком",info='Приготовить блюдо блин', cooking_time=60) 
+    r5=models.Recipe(name="Чай с малиной",info='Приготовить блюдо блин',cooking_time=15) 
+    r6=models.Recipe(name="Манник",info='Приготовить блюдо блин', cooking_time=100) 
 
     #пицца
     count1=models.Count(recipe=r1, ingredient=i1, count=250, system_of_calc=soc2)

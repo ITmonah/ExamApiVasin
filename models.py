@@ -21,8 +21,7 @@ class Recipe(Base): #рецепты
     
     id = Column(Integer, primary_key=True) 
     name = Column(String(255), nullable=False)
-    info = Column(String, nullable=False)
-    face_img = Column(String(255), nullable=False, default="http://127.0.0.1:8000/recipe/files/food.png") #фото обязательно
+    info = Column(String(), nullable=False)
     created_at=Column(TIMESTAMP(timezone=False), 
                         server_default=func.now())
     cooking_time=Column(Integer, nullable=False)

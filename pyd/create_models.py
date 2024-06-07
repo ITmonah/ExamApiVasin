@@ -21,7 +21,7 @@ class IngredientCreate(BaseModel):
 class System_of_calculationCreate(BaseModel):
     name:str=Field(...,max_length=255, min_length=1,example="кг")
 
-class CountCreate(BaseModel):        
+class CountCreate(BaseModel):
     id_ingredient:int=Field(..., gt=0, example=10)
     count:int=Field(..., gt=0, example=10)
     id_system_of_calc:int=Field(..., gt=0, example=10)
