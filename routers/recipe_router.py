@@ -6,7 +6,6 @@ from database import get_db
 import pyd
 from auth import AuthHandler
 
-# контролер пользователя
 router = APIRouter(
     prefix="/recipe",
     tags=["recipe"],

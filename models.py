@@ -47,10 +47,10 @@ class Count(Base): #таблица, связывающая ингредиент�
     __tablename__ = "counts"
 
     id = Column(Integer, primary_key=True)
-    id_recipe = Column(Integer, ForeignKey('recipes.id'), nullable=False, default=1)
-    id_ingredient = Column(Integer, ForeignKey('ingredients.id'), nullable=False, default=1)
+    id_recipe = Column(Integer, ForeignKey('recipes.id',ondelete="CASCADE"), nullable=False, default=1)
+    id_ingredient = Column(Integer, ForeignKey('ingredients.id',ondelete="CASCADE"), nullable=False, default=1)
     count = Column(Integer, nullable=False, default=1)
-    id_system_of_calc = Column(Integer, ForeignKey('system_of_calculations.id'), nullable=False, default=1)
+    id_system_of_calc = Column(Integer, ForeignKey('system_of_calculations.id',ondelete="CASCADE"), nullable=False, default=1)
 
     recipe: Mapped["Recipe"] = relationship(back_populates='counts')
     ingredient: Mapped["Ingredient"] = relationship(backref='counts')

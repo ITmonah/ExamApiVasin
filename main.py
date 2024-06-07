@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import models
 from database import SessionLocal, engine
-from routers import user_router, recipe_router
+from routers import user_router, recipe_router, ingredient_router
 
 # Инициализация фастапи
 app = FastAPI()
@@ -9,3 +9,4 @@ app = FastAPI()
 # подключение АпиРоутера (маршруты сущности)
 app.include_router(user_router)
 app.include_router(recipe_router)
+app.include_router(ingredient_router)
